@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/UserOperationSchema"
+	xmlns:tns="http://www.example.org/UserOperationSchema"
+	elementFormDefault="qualified">
+
+	<complexType name="AddCardRequest">
+		<complexContent>
+			<extension base="tns:UserOperationRequest">
+				<sequence>
+					<element name="test1" type="string"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="UserOperationRequest"/>
+
+	<complexType name="UserOperationResponse"/>
+
+	<complexType name="AddCardResponse">
+		<complexContent>
+			<extension base="tns:UserOperationResponse">
+				<sequence>
+					<element name="test2" type="string"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>
